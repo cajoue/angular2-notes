@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class NotesComponent implements OnInit {
   note = {
     title: 'placeholder Title',
-    value: 'placeholder value'
-  }
+    value: 'placeholder value',
+    color: 'lightblue'
+  };
 
   constructor() { }
 
