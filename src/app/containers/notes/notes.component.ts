@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notes.component.css']
 })
 export class NotesComponent implements OnInit {
-  note = {
-    title: 'placeholder Title',
-    value: 'placeholder value',
-    color: 'lightblue'
-  };
+  notes = [
+    { title: 'House move', value: 'pack boxes', color: 'lightblue' },
+    { title: 'Exercise', value: 'HIIT training', color: 'orange' },
+    { title: 'Dogs', value: 'Look for adoptable dogs', color: 'gold' }
+  ];
 
   constructor() { }
 

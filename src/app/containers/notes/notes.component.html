@@ -4,7 +4,13 @@
   </div>
   <div class="notes col-xs-8">
     <div class="row between-xs">
-      <app-note-card [note]="note"></app-note-card>
+      <app-note-card 
+        class="col-xs-4"
+        [note]="note"
+        *ngFor="let note of notes"
+
+      >
+      </app-note-card>
     </div>
   </div>
 </div>
