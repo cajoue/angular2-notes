@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notes.component.css']
 })
 export class NotesComponent implements OnInit {
+  note = {
+    title: 'placeholder Title',
+    value: 'placeholder value'
+  }
 
   constructor() { }
 

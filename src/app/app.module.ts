@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './containers/main/main.component';
 import { NavbarComponent } from './ui/navbar/navbar.component';
 import { NotesComponent } from './containers/notes/notes.component';
+import { NoteCardComponent } from './ui/note-card/note-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     NavbarComponent,
-    NotesComponent
+    NotesComponent,
+    NoteCardComponent
   ],
   imports: [
     BrowserModule,
