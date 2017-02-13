@@ -13,4 +13,8 @@ export class NoteCardComponent implements OnInit {
   ngOnInit() {
   }
 
+  onChecked() {
+    console.log('clicked a note');
+  }
+
 }
