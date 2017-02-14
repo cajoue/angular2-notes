@@ -7,10 +7,17 @@
       <app-note-card 
         class="col-xs-4"
         [note]="note"
-        *ngFor="let note of notes"
-
+        *ngFor="let note of notes; let i = index"
+        (checked)="onNoteChecked(i)"
       >
       </app-note-card>
     </div>
   </div>
 </div>
+<!-- 
+  we know that the note itself is being passed in (this.note)
+  and so could reference it using $event 
+    (checked)="onNoteChecked($event)" 
+  but we don't need the note, we just need its index - 
+  which we can get by adding local var i to the *ngFor expression
+-->

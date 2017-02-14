@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-note-card',
@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NoteCardComponent implements OnInit {
   @Input() note = {};
+  @Output() checked = new EventEmitter();
+  
   showCheck: boolean = false;
 
   constructor() { }
@@ -15,7 +17,7 @@ export class NoteCardComponent implements OnInit {
   }
 
   onChecked() {
-    console.log('clicked a note');
+    this.checked.next(this.note);
   }
 
   toggleCheck() {

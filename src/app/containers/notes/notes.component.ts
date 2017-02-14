@@ -17,4 +17,7 @@ export class NotesComponent implements OnInit {
   ngOnInit() {
   }
 
+  onNoteChecked(i: number){
+    this.notes.splice(i, 1);
+  }
 }
