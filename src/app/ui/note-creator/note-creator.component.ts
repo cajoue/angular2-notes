@@ -13,6 +13,8 @@ export class NoteCreatorComponent implements OnInit {
     value: ''
   }
 
+  fullForm: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -26,6 +28,7 @@ export class NoteCreatorComponent implements OnInit {
     }
 
     this.reset();
+    this.toggleFullForm(false);
   }
 
   reset() {
@@ -33,5 +36,9 @@ export class NoteCreatorComponent implements OnInit {
       title: '',
       value: ''
     };
+  }
+
+  toggleFullForm(value: boolean) {
+    this.fullForm = value;
   }
 }
