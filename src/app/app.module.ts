@@ -8,6 +8,7 @@ import { MainComponent } from './containers/main/main.component';
 import { NavbarComponent } from './ui/navbar/navbar.component';
 import { NotesComponent } from './containers/notes/notes.component';
 import { NoteCardComponent } from './ui/note-card/note-card.component';
+import { NoteCreatorComponent } from './ui/note-creator/note-creator.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NoteCardComponent } from './ui/note-card/note-card.component';
     MainComponent,
     NavbarComponent,
     NotesComponent,
-    NoteCardComponent
+    NoteCardComponent,
+    NoteCreatorComponent
   ],
   imports: [
     BrowserModule,
