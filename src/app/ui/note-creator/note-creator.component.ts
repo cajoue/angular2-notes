@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoteCreatorComponent implements OnInit {
 
+  newNote = {
+    title: '',
+    value: ''
+  }
+
   constructor() { }
 
   ngOnInit() {
