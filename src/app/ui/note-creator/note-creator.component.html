@@ -17,6 +17,9 @@
       class="col-xs-10"
     >
     <div class="actions col-xs-12 row between-xs" *ngIf="fullForm">
+      <div class="col-xs-3">
+        <app-color-picker [colors]="colors"></app-color-picker>
+      </div>
       <button
         type="submit"
         class="btn-light"
