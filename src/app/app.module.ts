@@ -11,6 +11,7 @@ import { NoteCardComponent } from './ui/note-card/note-card.component';
 import { NoteCreatorComponent } from './ui/note-creator/note-creator.component';
 import { ColorPickerComponent } from './ui/color-picker/color-picker.component';
 import { ApiService } from './services/api.service';
+import { NotesService } from './services/notes.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ApiService } from './services/api.service';
     FormsModule,
     HttpModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, NotesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
