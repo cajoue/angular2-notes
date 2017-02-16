@@ -9,12 +9,19 @@ export class ColorPickerComponent implements OnInit {
   @Input() colors: string[] = [];
   @Output() selectedColor = new EventEmitter();
 
+  isPickerVisible: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   selectColor(color: string) {
+    this.showPicker(false);
     this.selectedColor.next(color);
+  }
+
+  showPicker(value: boolean) {
+    this.isPickerVisible = value;
   }
 }

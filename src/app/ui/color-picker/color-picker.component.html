@@ -1,6 +1,6 @@
 <div class="color-selector">
-  <i class="material-icons icon">color_lens</i>
-  <div class="selector row center-xs">
+  <i (click)="showPicker(true)" class="material-icons icon">color_lens</i>
+  <div class="selector row center-xs" *ngIf="isPickerVisible" >
     <div 
       class="color"
       *ngFor="let color of colors" 
