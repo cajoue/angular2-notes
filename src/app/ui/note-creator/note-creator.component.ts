@@ -11,7 +11,8 @@ export class NoteCreatorComponent implements OnInit {
 
   newNote = {
     title: '',
-    value: ''
+    value: '',
+    color: 'white'
   }
 
   fullForm: boolean = false;
@@ -22,10 +23,10 @@ export class NoteCreatorComponent implements OnInit {
   }
 
   onCreateNote() {
-    const { title, value } = this.newNote;
+    const { title, value, color } = this.newNote;
 
     if (title && value) {
-      this.createNote.next({ title, value });
+      this.createNote.next({ title, value, color });
     }
 
     this.reset();
@@ -35,11 +36,16 @@ export class NoteCreatorComponent implements OnInit {
   reset() {
     this.newNote = {
       title: '',
-      value: ''
+      value: '',
+      color: 'white'
     };
   }
 
   toggleFullForm(value: boolean) {
     this.fullForm = value;
+  }
+
+  onColorSelect(color: string) {
+    this.newNote.color = color;
   }
 }
